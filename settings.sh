@@ -1,0 +1,6 @@
+SSH_DIR=~/.ssh/
+PROJECT_NAME=borg-container
+KEY_FILENAME=${PROJECT_NAME}-test2
+USERNAME=andrewdircks
+IP=35.203.27.2
+VS_CONFIG=${SSH_DIR}config
