@@ -34,3 +34,7 @@ CONFIG="\nHost ${IP}
   IdentityFile ${SSH_DIR}${KEY_FILENAME}
   User ${USERNAME}"
 echo -e "$CONFIG" >> ${VS_CONFIG}
+
+# delete directory
+cd ../
+rm -r -f gcp-vscode-ssh/
