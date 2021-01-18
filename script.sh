@@ -15,7 +15,7 @@ KEYS_STORE="store.txt"
 TEMP="temp.txt"
 touch ${KEYS_STORE}
 gcloud compute project-info describe | tee ${TEMP}
-python3 gcp-vscode-ssh/parse_metadata.py ${TEMP} ${KEYS_STORE}
+python gcp-vscode-ssh/parse_metadata.py ${TEMP} ${KEYS_STORE}
 rm ${TEMP}
 echo ${USERNAME}:`cat ${SSH_DIR}${KEY_FILENAME}.pub` >> ${KEYS_STORE}
 gcloud compute project-info add-metadata --metadata-from-file ssh-keys=${KEYS_STORE}
