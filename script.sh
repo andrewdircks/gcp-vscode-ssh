@@ -29,4 +29,4 @@ CONFIG="\nHost ${IP}
 echo -e "$CONFIG" >> ${VS_CONFIG}
 
 # delete directory
-# rm -r -f gcp-vscode-ssh/
+rm -r -f gcp-vscode-ssh/
