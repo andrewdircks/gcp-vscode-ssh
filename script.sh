@@ -6,13 +6,6 @@ USERNAME="$4"
 IP="$5"
 VS_CONFIG=${SSH_DIR}config
 
-# test command line args
-echo ${SSH_DIR}
-echo ${PROJECT_NAME}
-echo ${KEY_FILENAME}
-echo ${USERNAME}
-echo ${IP}
-
 # keygen
 ssh-keygen -t rsa -f ${SSH_DIR}${KEY_FILENAME} -C ${USERNAME}
 
@@ -36,5 +29,4 @@ CONFIG="\nHost ${IP}
 echo -e "$CONFIG" >> ${VS_CONFIG}
 
 # delete directory
-cd ../
-rm -r -f gcp-vscode-ssh/
+# rm -r -f gcp-vscode-ssh/
